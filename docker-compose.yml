@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+    db:
+        image: mongo
+        restart: always
+        container_name: "db_node-api"
+        environment:
+            - MONGO_DATA-DIR=/data/db
+        ports:
+            - 27018:27017
+        expose:
+            - "27017"
+        volumes:
+            - ./data/db:/data/db:z
+        command: mongod --smallfiles
+    app:
+        image: node:alpine
+        container_name: "app_node-api"
+        ports:
+            - 5555:5000
+        volumes:
+            - .:/usr/app:z
+        links:
+            - "db:db"
+        environment:
+            APPPATH: "/usr/app"
+        command: ["sh", "/usr/app/run.sh"]

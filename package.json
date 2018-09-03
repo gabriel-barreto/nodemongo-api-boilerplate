@@ -1,0 +1,39 @@
+{
+    "name": "gb-nodemongoapi-boilerplate",
+    "version": "1.0.0",
+    "description": "A Boilerplate to build powerful API using NodeJS + Express + Mongoose",
+    "main": "app.js",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development nodemon app.js",
+        "start": "cross-env NODE_ENV=production node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gabriel-barreto/nodemongoboilerplate.git"
+    },
+    "keywords": [
+        "node",
+        "mongo",
+        "mongoose",
+        "api",
+        "express",
+        "boilerplate",
+        "javascript"
+    ],
+    "author": "Gabriel Barreto <barreto-gabriel@outlook.com> (https://gabriel-barreto.tech)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/gabriel-barreto/nodemongoboilerplate/issues"
+    },
+    "homepage": "https://github.com/gabriel-barreto/nodemongoboilerplate#readme",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "cross-env": "^5.2.0",
+        "express": "^4.16.3",
+        "mongoose": "^5.2.12",
+        "morgan": "^1.9.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.4"
+    }
+}
