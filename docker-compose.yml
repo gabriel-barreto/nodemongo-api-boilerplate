@@ -15,8 +15,12 @@ services:
             - ./data/db:/data/db:z
         command: mongod --smallfiles
     app:
-        image: node:alpine
+        build: .
+        image: gabriel-barreto/nodeapi:node
         container_name: "app_node-api"
+        # ==> To Production
+        # context: .
+        # dockerfile: Dockerfile-production
         ports:
             - 5555:5000
         volumes:
@@ -25,4 +29,3 @@ services:
             - "db:db"
         environment:
             APPPATH: "/usr/app"
-        command: ["sh", "/usr/app/run.sh"]
