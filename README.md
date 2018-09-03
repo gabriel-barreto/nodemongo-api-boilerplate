@@ -18,6 +18,7 @@ This boilerplate aux you to build a powerful API using MongoDB and NodeJS!
 ### Recomended
 
 -   Docker (^18.06)
+-   Docker Compose (^1.22)
 
     > _Obs.: I recommended to you run this app in docker container, in repo you have a docker-compose.yml file with all nedded configurations_
 
