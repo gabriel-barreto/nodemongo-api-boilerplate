@@ -1,8 +1,8 @@
 // ==> Dependencies
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
 // ==> Config
-const config = require("../Config/mongo.config");
+import config from '../Config/mongo.config';
 
 /**
  * Connect open to mongoose a brigde with MongoDB cluster
@@ -16,30 +16,27 @@ const connect = (forcedURI = null) => {
     }
 
     // ==> Create connection listeners
-    mongoose.connection.on("connected", () => {
-        console.log("[MONGO] Connected");
+    mongoose.connection.on('connected', () => {
+        console.log('[MONGO] Connected');
     });
-    mongoose.connection.on("disconnected", () => {
-        console.warn("[MONGO] Disconnected");
+    mongoose.connection.on('disconnected', () => {
+        console.warn('[MONGO] Disconnected');
     });
-    mongoose.connection.on("error", err => {
+    mongoose.connection.on('error', err => {
         console.error(`[MONGO] An error occurred: ${err.message}`);
     });
-    mongoose.connection.on("open", () => {
-        console.log("[MONGO] Ready");
+    mongoose.connection.on('open', () => {
+        console.log('[MONGO] Ready');
     });
 
     // Connecting
-    mongoose.connect(
-        uri,
-        {
-            keepAlive: true,
-            useNewUrlParser: true
-        }
-    );
+    mongoose.connect(uri, {
+        keepAlive: true,
+        useNewUrlParser: true,
+    });
     mongoose.Promise = global.Promise;
 };
 
-module.exports = {
-    connect
+export default {
+    connect,
 };

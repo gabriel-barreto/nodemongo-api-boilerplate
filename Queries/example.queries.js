@@ -1,7 +1,9 @@
 // Import model
-// const model = require("../Models/[model_name].model");
+// import model from "../Models/[model_name].model";
+// or
+// import { model } from "../Models";
 
 // Exporting your model queries
-// module.exports = {
+// export default {
 // list: model.find({}),
 // };

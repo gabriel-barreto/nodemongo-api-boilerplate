@@ -1,6 +1,5 @@
 // Importing dependencies
-// const mongoose = require("mongoose");
-// const { Schema } = mongoose;
+// import mongoose, { Schema } from "mongoose";
 
 // Declare your model Schema
 // const ModelSchema = new Schema({});
@@ -9,4 +8,4 @@
 // const model = mongoose.model("ModelName", ModelSchema, "Collection");
 
 // Export model
-// module.exports = model;
+// export default model;

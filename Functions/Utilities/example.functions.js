@@ -9,12 +9,12 @@
 // };
 
 // Export public functions
-// module.exports = {
+// export default {
 //     method,
 // };
 
 // NOTE: You can use a class approach
-// module.exports = class {
+// export default class {
 // constructor() {}
 // Private methods
 // _method (params) {

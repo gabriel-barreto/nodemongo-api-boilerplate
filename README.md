@@ -6,28 +6,18 @@ This boilerplate aux you to build a powerful API using MongoDB and NodeJS!
 
 ## Guide
 
-- [NodeMongo API Boilerplate](#nodemongo-api-boilerplate)
-    - [Guide](#guide)
-    - [Requirements](#requirements)
-        - [Recomended](#recomended)
-        - [No Container](#no-container)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Enjoy and Contributing](#enjoy-and-contributing)
-    - [QA](#qa)
+- [NodeMongo API Boilerplate](#NodeMongo-API-Boilerplate)
+  - [Guide](#Guide)
+  - [Requirements](#Requirements)
+    - [Recomended](#Recomended)
+  - [Usage](#Usage)
+  - [License](#License)
+  - [Enjoy and Contributing](#Enjoy-and-Contributing)
+  - [QA](#QA)
 
 ## Requirements
 
 ### Recomended
-
--   Docker ^18.06
--   Docker Compose ^1.22
-
-    > _Obs.: I recommended to you run this app in docker container, in repo you have a docker-compose.yml file with all nedded configurations_
-    >
-    > _[Think about use Swarm instead Compose in production environment](https://github.com/BretFisher/ama/issues/8)_
-
-### No Container
 
 -   MongoDB ^3.6.4
 -   Node ^8.11.4
@@ -44,16 +34,12 @@ This boilerplate aux you to build a powerful API using MongoDB and NodeJS!
 _Obs.: Run this command inside cloned folder_
 
 > $ npm install
+> $ yarn install
 
-**3. Build containers**
+**2. Run test suite**
 
-_Obs.: This step is unecessary if you decided to run your api out of docker container_
-
-> $ docker-compose up
-
-> $ docker-compose up -d
->
-> _To run all containers in background_
+> $ npm test
+> $ yarn test
 
 **4. Run**
 
@@ -71,9 +57,7 @@ _This step isn`t necessary if you're using this boilerplate docker containers_
 
 _If you're running out from container use port 5000 instead 5555_
 
-> $ curl http://127.0.0.1:5555/api/run _Containered_
-
-> $ curl http://127.0.0.1:5000/api/run _No-Container_
+> $ curl http://127.0.0.1:5000/api/run
 
 **Expected Response:**
 

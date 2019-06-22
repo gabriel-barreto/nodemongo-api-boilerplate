@@ -1,5 +1,5 @@
-# Data dir (MongoDB Files)
-data
+# Prod files
+bin
 
 # Lock files
 *-lock.json

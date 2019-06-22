@@ -1,9 +1,9 @@
-const run = (req, res) => {
+const run = (_req, res) => {
     res.status(200).send({
-        message: "Hello World!"
+        message: 'Hello World!',
     });
 };
 
-module.exports = {
-    run
+export default {
+    run,
 };

@@ -12,4 +12,4 @@
 // Router.put("/run", Controller.run);
 // Router.delete("/run", Controller.run);
 
-// module.exports = Router;
+// export default Router;

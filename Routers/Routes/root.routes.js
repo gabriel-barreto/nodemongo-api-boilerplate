@@ -1,12 +1,13 @@
 // ==> Instanciate new router
-const Router = require("express").Router();
+import express from 'express';
+const Router = express.Router();
 
 // ==> Importing controllers
-const Controller = require("../../Controllers/root.controller");
+import Controller from '../../Controllers/root.controller';
 
 // ==> Building routes
 // Create all your routes to this Router
 // Router.[HTTP method]([API Path], [Controller Method]);
-Router.get("/run", Controller.run);
+Router.get('/run', Controller.run);
 
-module.exports = Router;
+export default Router;
