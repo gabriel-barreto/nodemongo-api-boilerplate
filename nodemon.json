@@ -3,7 +3,7 @@
   "ext": "js",
   "ignore": ["*.spec.js", "node_modules", ".git"],
   "execMap": {
-    "js": "npm run build"
+    "js": "npm run start:dev"
   },
   "env": {
     "NODE_ENV": "development"
