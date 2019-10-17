@@ -3,7 +3,7 @@ import express from 'express';
 const Router = express.Router();
 
 // ==> Importing controllers
-import Controller from '../../Controllers/root.controller';
+import { Root as Controller } from '../../Controllers';
 
 // ==> Building routes
 // Create all your routes to this Router
