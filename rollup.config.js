@@ -5,15 +5,15 @@ const deps = require('./package.json').dependencies;
 const external = Object.keys(deps);
 
 export default {
-    input: 'app.js',
-    output: {
-        file: 'bin/app.js',
-        format: 'cjs',
-        name: 'App',
-    },
-    plugins: [
-        resolve({ mainFields: ['module', 'main'], modulesOnly: true }),
-        commonjs(),
-    ],
-    external,
+  input: 'server.js',
+  output: {
+    file: 'bin/server.js',
+    format: 'cjs',
+    name: 'App',
+  },
+  plugins: [
+    resolve({ mainFields: ['module', 'main'], modulesOnly: true }),
+    commonjs(),
+  ],
+  external,
 };
