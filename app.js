@@ -9,14 +9,13 @@ import logger from 'morgan';
 import { app as Config } from './Config';
 
 // ==> Getting modules
-import Mongo from './Functions/mongo.functions';
+import { Mongo } from './Functions';
 import Routers from './Routers';
 
 class App {
   constructor() {
     this.app = express();
-
-    this.database();
+    this.init();
   }
 
   setup(err) {
@@ -29,27 +28,25 @@ class App {
     console.log(`[API] Mode: ${Config.mode}`);
     console.log(`[API] Port: ${Config.port}`);
     console.log('');
-  }
 
-  listen(port) {
-    this.server = this.app.listen(port, this.setup);
-    return this.server;
-  }
-
-  database() {
+    // ==> Connection to db
     Mongo.connect();
+  }
+
+  listen() {
+    this.app.listen(Config.port, this.setup);
   }
 
   init() {
     // ==> Inject dependencies
-    app.use(bodyParser.json());
-    app.use(helmet());
-    app.use(compression());
-    app.use(logger(config.isDev ? 'dev' : 'tiny'));
+    this.app.use(bodyParser.json());
+    this.app.use(helmet());
+    this.app.use(compression());
+    this.app.use(logger(Config.isDev ? 'dev' : 'tiny'));
 
     // ==> Injecting routers
-    app.use('/api', Routers);
+    this.app.use('/api', Routers);
   }
 }
 
-export default App;
+export default new App();
