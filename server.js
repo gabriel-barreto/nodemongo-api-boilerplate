@@ -1,2 +1,2 @@
 import App from './app';
-new App().listen();
+App.listen();
