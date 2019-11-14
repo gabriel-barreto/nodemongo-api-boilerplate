@@ -3,7 +3,7 @@
   "ext": "js",
   "ignore": ["*.spec.js", "node_modules", ".git"],
   "execMap": {
-    "js": "npm run start:dev"
+    "js": "sucrase-node"
   },
   "env": {
     "NODE_ENV": "development"
